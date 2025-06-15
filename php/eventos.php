@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once __DIR__ . '/protect.php';
 
 if (!isset($_SESSION['token']) || !isset($_SESSION['aluno'])) {
@@ -36,7 +35,7 @@ if ($httpCode === 200) {
 <head>
     <meta charset="UTF-8">
     <title>Eventos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
         th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
