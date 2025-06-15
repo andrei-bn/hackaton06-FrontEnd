@@ -88,6 +88,12 @@ if ($httpCode === 200) {
                         <td><?= htmlspecialchars($evento['palestrante_nome']) ?></td>
                         <td><?= htmlspecialchars($evento['palestrante_tema']) ?></td>
                         <td><?= htmlspecialchars($evento['coordenador_nome']) ?></td>
+                        <td>
+                            <form method="post" action="inscrever.php">
+                                <input type="hidden" name="evento_id" value="<?= htmlspecialchars($evento['id']) ?>">
+                                <button type="submit">Inscrever-se</button>
+                            </form>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
